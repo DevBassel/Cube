@@ -1,0 +1,96 @@
+body {
+  font-size: 40px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 800;
+}
+*{
+  -webkit-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 800px;
+  perspective-origin: 50% 100px;
+  box-shadow: 8px 8px 500px #00A8A8 inset;
+
+}
+
+.container .d3 {
+  background: #ddd;
+  position: relative;
+  transform-style: preserve-3d;
+
+}
+
+.container  div {
+  background: #123;
+  color: white;
+  border: 2px solid #eee;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+     transition: 1s;
+}
+.d3:hover div{
+   border-width: 10px;
+}
+.d3:hover{
+     animation-play-state: paused;
+
+}
+.back {
+  transform: translateZ(-100px) rotateY(180deg);
+}
+
+.right {
+  transform: rotateY(-270deg) translateX(100px);
+  transform-origin: top right;
+}
+
+.left {
+  transform: rotateY(270deg) translateX(-100px);
+  transform-origin: center left;
+}
+
+.top {
+  transform: rotateX(-90deg) translateY(-100px);
+  transform-origin: top center;
+}
+.bottom {
+	transform: rotateX(90deg) translateY(100px);
+	transform-origin: bottom center;
+}
+.front {
+	transform: translateZ(100px);
+}
+@keyframes spin {
+	from { transform: rotateY(0); }
+	to { transform: rotateY(360deg); }
+}
+
+.d3 {
+	animation: spin 5s infinite linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotateY(0);
+  }
+
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.d3 {
+  animation: spin 10s infinite linear;
+}
