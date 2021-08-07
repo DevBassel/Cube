@@ -1,9 +1,10 @@
 body {
-  font-size: 40px;
+  font-size: 55px;
   font-family: 'Times New Roman', Times, serif;
   font-weight: 800;
 }
-*{
+
+* {
   -webkit-box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -16,21 +17,28 @@ body {
   align-items: center;
   perspective: 800px;
   perspective-origin: 50% 100px;
-  box-shadow: 8px 8px 500px #00A8A8 inset;
-
+  background: #7531FF
 }
 
 .container .d3 {
-  background: #ddd;
+  background: transparent;
+  border: none;
   position: relative;
   transform-style: preserve-3d;
 
 }
 
-.container  div {
-  background: #123;
+.container::before {
+  content: "Hover Me";
+  position: absolute;
+  top: 16%;
+  font-family: Helvetica, sans-serif
+}
+
+.container div {
+  background: #124589;
   color: white;
-  border: 2px solid #eee;
+  border: .5px solid #1235;
   position: absolute;
   display: flex;
   justify-content: center;
@@ -38,15 +46,21 @@ body {
   position: absolute;
   width: 200px;
   height: 200px;
-     transition: 1s;
-}
-.d3:hover div{
-   border-width: 10px;
-}
-.d3:hover{
-     animation-play-state: paused;
+  transition: .5s;
 
 }
+
+.d3:hover div {
+  border-width: 40px;
+  transition: 1.6s;
+  transform: rotatey(70deg) rotatex(-20deg) scale(.5);
+}
+
+.d3:hover .front {
+  right: -100px;
+}
+
+
 .back {
   transform: translateZ(-100px) rotateY(180deg);
 }
@@ -65,21 +79,16 @@ body {
   transform: rotateX(-90deg) translateY(-100px);
   transform-origin: top center;
 }
+
 .bottom {
-	transform: rotateX(90deg) translateY(100px);
-	transform-origin: bottom center;
-}
-.front {
-	transform: translateZ(100px);
-}
-@keyframes spin {
-	from { transform: rotateY(0); }
-	to { transform: rotateY(360deg); }
+  transform: rotateX(90deg) translateY(100px);
+  transform-origin: bottom center;
 }
 
-.d3 {
-	animation: spin 5s infinite linear;
+.front {
+  transform: translateZ(100px);
 }
+
 
 @keyframes spin {
   from {
@@ -87,10 +96,10 @@ body {
   }
 
   to {
-    transform: rotateY(360deg);
+    transform: rotatey(1turn);
   }
 }
 
 .d3 {
-  animation: spin 10s infinite linear;
+  animation: spin 7s infinite linear;
 }
