@@ -84,12 +84,13 @@ h1::before {
 .d3:hover div {
   border-width: 40px;
   border-radius: 50%;
-  transform: rotatey(170deg) rotatex(30deg) scale(.7);
+  transform: rotatey(80deg) rotatex(30deg) scale(.7);
 
 }
 
 .d3 div {
-  transition: 1s linear;
+  transition: 1.5s linear;
+animation-delay: .5s
 }
 
 .d3:hover .front {
