@@ -89,7 +89,7 @@ h1::before {
 }
 
 .d3 div {
-  transition: 1.5s linear;
+  transition: .5s linear;
 }
 
 .d3:hover .front {
