@@ -19,12 +19,14 @@ body {
   perspective-origin: 60% 200px;
   background: #7531FF
 }
-@media (max-width: 761px) {
-  .container{
-  perspective-origin: 50% 100px;
 
+@media (max-width: 761px) {
+  .container {
+    perspective-origin: 50% 100px;
+
+  }
 }
-}
+
 .container .d3 {
   background: transparent;
   border: none;
@@ -34,16 +36,17 @@ body {
 }
 
 h1 {
-  content: "Hover Me";
   position: absolute;
   top: 5%;
   font-size: 50px;
-  color: snow;  transform: rotateX(60deg) translatey(50px);
+  color: snow;
+  transform: rotateX(60deg) translatey(50px);
   border: 5px solid #062F71;
-padding: 20px;
-   transform-origin: bottom center;
- font-family: Helvetica, sans-serif
+  padding: 20px;
+  transform-origin: bottom center;
+  font-family: Helvetica, sans-serif
 }
+
 
 h1::before {
   content: "";
@@ -63,10 +66,10 @@ h1::before {
   }
 
 }
-  
+
 
 .container div {
-  background: rgba(0,0,0,.3);
+  background: rgba(0, 0, 0, .3);
   color: white;
   border: 1.5px solid #1235;
   position: absolute;
@@ -76,19 +79,17 @@ h1::before {
   position: absolute;
   width: 200px;
   height: 200px;
-  transition: 3.5s;
-
 }
 
 .d3:hover div {
   border-width: 40px;
-  transition: 1.6s;
   border-radius: 50%;
   transform: rotatey(170deg) rotatex(30deg) scale(.7);
 
 }
 
-.d3:hover {
+.d3 div {
+  transition: 1.5s linear;
 }
 
 .d3:hover .front {
