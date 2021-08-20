@@ -23,7 +23,6 @@ body {
 @media (max-width: 761px) {
   .container {
     perspective-origin: 50% 100px;
-
   }
 }
 
@@ -90,7 +89,7 @@ h1::before {
 
 .d3 div {
   transition: 1.5s linear;
-animation-delay: .5s
+  animation-delay: .5s
 }
 
 .d3:hover .front {
